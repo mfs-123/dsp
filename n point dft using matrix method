@@ -1,0 +1,11 @@
+%n point dft using matrix method
+
+clc;
+clear;
+close all;
+
+N=input('enter the number of points');
+x=input('enter the sequence');
+L=length(x);
+y=dftmtx(N)*x';
+disp(y)
