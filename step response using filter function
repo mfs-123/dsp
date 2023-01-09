@@ -1,0 +1,13 @@
+clc;
+clear all;
+a=[ones(1,10)];
+x=[1];
+y=[1,-0.75,0.125];
+z=filter(x,y,a);
+b=0:length(z)-1;
+grid on;
+stem(b,z);
+xlabel('time');
+ylabel('amplitude');
+title('step response using filter function');
+disp(z);
