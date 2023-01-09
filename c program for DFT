@@ -1,0 +1,31 @@
+// C program for DFT
+#include <math.h>
+#include <stdio.h>
+
+// Function to calculate the DFT
+void calculateDFT(int len)
+{
+    int xn[4] = {1, 2, 3, 4};
+    float Xr[4];
+    float Xi[4];
+    int  k, n, N = 0;
+    N = 4;
+    for (k = 0; k < N; k++) {
+        Xr[k] = 0;
+        Xi[k] = 0;
+        for (n = 0; n < len; n++) {
+            Xr[k] = (Xr[k]+ xn[n] * cos(2 * 3.141592 * k * n / N));
+
+            Xi[k]= (Xi[k]- xn[n] * sin(2 * 3.141592 * k * n / N));
+        }
+        printf("(%f) + j(%f)\n", Xr[k], Xi[k]);
+    }
+}
+// Driver Code
+int main()
+{
+    int len = 4;
+    calculateDFT(len);
+
+    return 0;
+}
