@@ -1,7 +1,9 @@
 clc;
+clear all;
+a=[zeros(1,10) 1 zero(1,10)];
 x=[1];
 y=[1,-0.75,0.125];
-z=filter(x,y,10);
+z=filter(x,y,a);
 grid on;
 stem(z);
 xlabel('time');
