@@ -1,0 +1,15 @@
+%circular convolution using fft and ifft 
+
+clc;
+close all;
+clear;
+x=[1,2,3,4];
+h=[4,5,6];
+L=max(length(x),length(h));
+X=fft(x,L);
+H=fft(h,L);
+Y=X.*H;
+y=ifft(Y,L);
+disp(y);
+z=cconv(x,h,L);
+disp(z);
