@@ -1,0 +1,9 @@
+clc;
+x=[1];
+y=[1,-0.75,0.125];
+z=impz(x,y,10);
+stem(z);
+xlabel('time');
+ylabel('amplitude');
+title('impulse response using impz function');
+disp(z);
