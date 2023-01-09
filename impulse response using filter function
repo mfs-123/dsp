@@ -1,0 +1,10 @@
+clc;
+x=[1];
+y=[1,-0.75,0.125];
+z=filter(x,y,10);
+grid on;
+stem(z);
+xlabel('time');
+ylabel('amplitude');
+title('impulse response using filter function');
+disp(z);
