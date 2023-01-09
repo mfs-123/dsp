@@ -1,0 +1,16 @@
+% n point idft using matrix method
+clc;
+
+close all;
+clear ;
+
+
+N=input('enter thhe number of points');
+x = input('enter the sequence');
+L=length(x);
+x=[x zeros(1,N-L)];
+X=x';
+w=conj(dftmtx(N));
+y=(w*X)/N;
+%z=y/N;
+disp(y);
