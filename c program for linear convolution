@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+    int x[10]={1,2,3,0},h[10]={1,2,3,4},y[10];
+    int k,n,q=4,p=3;
+    
+    for(k=0;k<p+q-1;k++){
+        y[k]=0;
+        for(n=0;n<=k;n++){
+            y[k] += x[n]*h[k-n];
+        }
+        printf("%d\n",y[k]);
+    }
+}
