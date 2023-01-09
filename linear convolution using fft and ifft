@@ -1,0 +1,15 @@
+%linear convolution using fft and ifft 
+
+clc;
+close all;
+clear;
+x=[1,2,3,4];
+h=[4,5,6];
+L=length(x)+length(h)-1;
+X=fft(x,L);
+H=fft(h,L);
+Y=X.*H;
+y=ifft(Y,L);
+disp(y);
+z=conv(x,h);
+disp(z);
