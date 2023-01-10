@@ -1,0 +1,7 @@
+n = input('enter the length of window');
+fc = input('enter the cutoff freq');
+fs = input('enter the sampling freq');
+wc = fc/fs;
+w = hamming(n);%replace hamming by bartlett for bartlett window
+h = fir1(n-1,wc,w);
+freqz(h);
